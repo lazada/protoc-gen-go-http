@@ -1,0 +1,13 @@
+package: github.com/lazada/protoc-gen-go-http
+import:
+- package: github.com/golang/glog
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+  - protoc-gen-go/descriptor
+  - protoc-gen-go/generator
+  - protoc-gen-go/plugin
+- package: github.com/sourcegraph/jsonrpc2
+- package: google.golang.org/genproto
+  subpackages:
+  - googleapis/api/annotations

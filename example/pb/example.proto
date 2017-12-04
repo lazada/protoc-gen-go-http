@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service Example {
+    // Simple request/response.
+    rpc GetPerson(Query) returns (Person) {}
+    // Server streaming (ignored).
+    rpc ListPeople(Query) returns (stream Person) {}
+}
+
+message Query {
+    string name = 1;
+    int32 ageFrom = 2;
+    int32 ageTo = 3;
+}
+
+message Person {
+    string name = 1;
+    int32 age = 2;
+}
